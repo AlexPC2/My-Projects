@@ -15,6 +15,18 @@ int atoi(char s[])
 	return n;
 }
 
+/*	lower : преобразование с в строчную; только для ASCI
+*/
+int lower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return c + 'a' - 'A'
+	else
+		return c;
+}
+
+//	с >= '0' && c <= '9' Аналогично isdigit(c)
+
 
 int main()
 {

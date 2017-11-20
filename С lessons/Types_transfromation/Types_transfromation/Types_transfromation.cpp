@@ -1,9 +1,9 @@
-// Types_transfromation.cpp: îïðåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïðèëîæåíèÿ.
+// Types_transfromation.cpp: Ã®Ã¯Ã°Ã¥Ã¤Ã¥Ã«Ã¿Ã¥Ã² Ã²Ã®Ã·ÃªÃ³ Ã¢ÃµÃ®Ã¤Ã  Ã¤Ã«Ã¿ ÃªÃ®Ã­Ã±Ã®Ã«Ã¼Ã­Ã®Ã£Ã® Ã¯Ã°Ã¨Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¿.
 //
 
 #include "stdafx.h"
 
-/*	atoi : ïðåîáðàçîâàíèå s â öåëîå
+/*	atoi : Ã¯Ã°Ã¥Ã®Ã¡Ã°Ã Ã§Ã®Ã¢Ã Ã­Ã¨Ã¥ s Ã¢ Ã¶Ã¥Ã«Ã®Ã¥
 */
 int atoi(char s[])
 {
@@ -15,7 +15,7 @@ int atoi(char s[])
 	return n;
 }
 
-/*	lower : ïðåîáðàçîâàíèå ñ â ñòðî÷íóþ; òîëüêî äëÿ ASCI
+/*	lower : Ã¯Ã°Ã¥Ã®Ã¡Ã°Ã Ã§Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã± Ã¢ Ã±Ã²Ã°Ã®Ã·Ã­Ã³Ã¾; Ã²Ã®Ã«Ã¼ÃªÃ® Ã¤Ã«Ã¿ ASCI
 */
 int lower(int c)
 {
@@ -25,7 +25,7 @@ int lower(int c)
 		return c;
 }
 
-//	ñ >= '0' && c <= '9' Àíàëîãè÷íî isdigit(c)
+//	Ã± >= '0' && c <= '9' Ã€Ã­Ã Ã«Ã®Ã£Ã¨Ã·Ã­Ã® isdigit(c)
 
 
 int main()
@@ -33,3 +33,4 @@ int main()
     return 0;
 }
 
+// Edited in browser from Alex PC #2

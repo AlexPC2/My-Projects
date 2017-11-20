@@ -1,9 +1,13 @@
-// Types_transfromation.cpp: îïðåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïðèëîæåíèÿ.
+// Types_transfromation.cpp:
 //
 
 #include "stdafx.h"
 
-/*	atoi : ïðåîáðàçîâàíèå s â öåëîå
+#include<ctype.h>	//	Library with helpful functions
+
+#include<math.h>	//	Library with mathematical functions 
+
+/*	atoi : Transforming 's' in integer
 */
 int atoi(char s[])
 {
@@ -15,21 +19,65 @@ int atoi(char s[])
 	return n;
 }
 
-/*	lower : ïðåîáðàçîâàíèå ñ â ñòðî÷íóþ; òîëüêî äëÿ ASCI
+/*	lower : Transforming 'c' in small 'c' ; Only for ASCII
 */
 int lower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return c + 'a' - 'A'
+		return c + 'a' - 'A';
 	else
 		return c;
 }
 
-//	ñ >= '0' && c <= '9' Àíàëîãè÷íî isdigit(c)
+//	c >= '0' && c <= '9' Alternative form : isdigit(c)
+
+
+// Pseudorandom generator function:
+unsigned long int next = 1;
+
+/*	rand:  return pseudorandom number 0...32767
+*/
+
+int rand()
+{
+	next = next * 1103515245 + 12345;
+
+	return (unsigned int)(next/65536) % 32768;
+}
+/*	srand: get "seed" for rand()
+*/
+void srand(unsigned int seed)
+{
+	next = seed;
+}
+
+
+//	#Exercise 2.3
+//	Write your function htol(s) 
+//	for transforming HEX to DEC numbers:
+int htol(char s[]) {
+	int i,n;
+	n = 0;
+
+	for (i = 0; s[i] >= '0' && s[i] <= 'F'; i++)
+		n = 16 * n + (s[i] - '0');
+
+	return n;
+}
 
 
 int main()
 {
+
+	// This is how we can transform types:
+	int i;
+	char c = 'a';
+	
+	i = c;	// Transforming int to the char type
+	c = i;	// Transforming char to the int
+
+	//	sqrt((double) n);	// 'n' Will be transformed to "double" when get to the function
+
     return 0;
 }
 

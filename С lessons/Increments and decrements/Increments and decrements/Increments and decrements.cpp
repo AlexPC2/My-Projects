@@ -40,3 +40,6 @@ int main()
 
 }
 
+
+// Now I want to delete this bag:
+ bag

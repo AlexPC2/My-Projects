@@ -1,4 +1,4 @@
-// Increments and decrements.cpp: By Alex Noyanov
+// Increments and decrements.cpp: определяет точку входа для консольного приложения.
 //
 
 //	Chapter 2.8 Increments and Decrements operators:
@@ -30,11 +30,6 @@ int main()
 	//x = n++;	X get n and then +1
 
 	//x = ++n;	N+1 at first and then get it to x
-    
-    char str[] = "alazambuzlu!";
-    
-    printf("%s",str);               // Print string;
-    printf("%s",squeeze(str,'a'));  // String without 'A' symbols
 
     return 0;
 

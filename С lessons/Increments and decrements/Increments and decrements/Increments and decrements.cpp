@@ -47,6 +47,3 @@ int main()
 
 // For reverse commit just use "Reverse commit"
 
-// Changes to revert:
-// This changes I want to revert
-

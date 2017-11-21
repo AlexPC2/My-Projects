@@ -31,6 +31,14 @@ int main()
 
 	//x = ++n;	N+1 at first and then get it to x
     
+    // Changes revert manualy:
+    
+    char str[] = "alazambuzlu!";
+    
+    printf("%s",str);               // Print string;
+    printf("%s",squeeze(str,'a'));  // String without 'A' symbols
+
+    
 
     return 0;
 

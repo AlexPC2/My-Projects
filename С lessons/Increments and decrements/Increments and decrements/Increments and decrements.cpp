@@ -30,9 +30,12 @@ int main()
 	//x = n++;	X get n and then +1
 
 	//x = ++n;	N+1 at first and then get it to x
+    
 
     return 0;
 
 }
 // And we just go to the last step to reverse the last version without bag!
+
+// For reverse commit just use "Reverse commit"
 

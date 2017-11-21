@@ -41,3 +41,6 @@ int main()
 }
 // And we just go to the last step to reverse the last version without bag!
 
+
+// Now I want to delete this bag:
+ bag

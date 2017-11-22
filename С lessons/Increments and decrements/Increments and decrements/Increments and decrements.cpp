@@ -1,4 +1,4 @@
-// Increments and decrements.cpp: определяет точку входа для консольного приложения.
+// Increments and decrements.cpp: 
 //
 
 //	Chapter 2.8 Increments and Decrements operators:

@@ -89,4 +89,7 @@ int main()
 
 // Changed by AlexMacBookPro
 
+<<<<<<< HEAD
 // comment!
+=======
+>>>>>>> 20099cad1a605768131f5505aff52b552c8c7e01

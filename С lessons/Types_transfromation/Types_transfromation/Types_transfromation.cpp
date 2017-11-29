@@ -59,7 +59,8 @@ int htol(char s[]) {
 	int i,n;
 	n = 0;
 
-	for (i = 0; s[i] >= '0' && s[i] <= 'F'; i++)
+	
+	for (i = 2; s[i] >= '0' && s[i] <= 'F'; i++)
 		n = 16 * n + (s[i] - '0');
 
 	return n;
@@ -77,10 +78,18 @@ int main()
 	c = i;	// Transforming char to the int
 
 	//	sqrt((double) n);	// 'n' Will be transformed to "double" when get to the function
+	// Test htol function:
+	
+	printf("%d", htol(x0fff));
 
     return 0;
 }
 
 // Edited in browser from Alex PC #2
 
+<<<<<<< HEAD
 //  Added By AlexNoyanov
+=======
+// Changed by AlexMacBookPro
+
+>>>>>>> 2f0b60843388ca76210b2619f2ab24a8fcd6104f

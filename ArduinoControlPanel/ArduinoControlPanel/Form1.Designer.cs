@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Action1Button = new System.Windows.Forms.Button();
-            this.Action2Button = new System.Windows.Forms.Button();
+            //this.Action2Button = new System.Windows.Forms.Button();
             this.Main1Button = new System.Windows.Forms.Button();
             this.Main2Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,6 +184,7 @@
             // 
             // Action2Button
             // 
+            /*
             this.Action2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Action2Button.Location = new System.Drawing.Point(459, 218);
             this.Action2Button.Name = "Action2Button";
@@ -192,6 +193,8 @@
             this.Action2Button.Text = "Action 2";
             this.Action2Button.UseVisualStyleBackColor = true;
             this.Action2Button.Click += new System.EventHandler(this.Action2Button);
+            */
+    
             // 
             // Main1Button
             // 
@@ -227,7 +230,7 @@
             this.ClientSize = new System.Drawing.Size(875, 528);
             this.Controls.Add(this.Main2Button);
             this.Controls.Add(this.Main1Button);
-            this.Controls.Add(this.Action2Button);
+           // this.Controls.Add(this.Action2Button);
             this.Controls.Add(this.Action1Button);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);

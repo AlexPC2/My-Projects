@@ -44,9 +44,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Action1Button = new System.Windows.Forms.Button();
-            //this.Action2Button = new System.Windows.Forms.Button();
             this.Main1Button = new System.Windows.Forms.Button();
             this.Main2Button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,20 +182,6 @@
             this.Action1Button.UseVisualStyleBackColor = true;
             this.Action1Button.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Action2Button
-            // 
-            /*
-            this.Action2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Action2Button.Location = new System.Drawing.Point(459, 218);
-            this.Action2Button.Name = "Action2Button";
-            this.Action2Button.Size = new System.Drawing.Size(180, 76);
-            this.Action2Button.TabIndex = 13;
-            this.Action2Button.Text = "Action 2";
-            this.Action2Button.UseVisualStyleBackColor = true;
-            this.Action2Button.Click += new System.EventHandler(this.Action2Button);
-            */
-    
-            // 
             // Main1Button
             // 
             this.Main1Button.BackColor = System.Drawing.Color.Red;
@@ -222,15 +208,26 @@
             this.Main2Button.UseVisualStyleBackColor = false;
             this.Main2Button.Click += new System.EventHandler(this.MainAction2);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(459, 218);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 76);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Action 2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Action2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(875, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Main2Button);
             this.Controls.Add(this.Main1Button);
-           // this.Controls.Add(this.Action2Button);
             this.Controls.Add(this.Action1Button);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
@@ -271,6 +268,7 @@
         private System.Windows.Forms.Button Action2Button;
         private System.Windows.Forms.Button Main1Button;
         private System.Windows.Forms.Button Main2Button;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -105,5 +105,10 @@ namespace ArduinoControlPanel
         {
 
         }
+
+        private void GetConnected(object sender, EventArgs e)   // Button for connecting
+        {
+
+        }
     }
 }

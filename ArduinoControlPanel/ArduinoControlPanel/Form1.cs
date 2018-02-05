@@ -188,5 +188,6 @@ namespace ArduinoControlPanel
         // {
         //     myport.WriteLine("Connect!");                       //Send command to controller
         // }
+
     }
 }

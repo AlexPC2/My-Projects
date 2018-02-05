@@ -174,9 +174,19 @@ namespace ArduinoControlPanel
 
         }
 
-       // private void GetConnected(object sender, EventArgs e)   // Button for connecting
-       // {
-       //     myport.WriteLine("Connect!");                       //Send command to controller
-       // }
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+            comboBox1.Items.Clear();
+            foreach (string comport in ports)
+            {
+                comboBox1.Items.Add(comport);
+            }
+        }
+
+        // private void GetConnected(object sender, EventArgs e)   // Button for connecting
+        // {
+        //     myport.WriteLine("Connect!");                       //Send command to controller
+        // }
     }
 }

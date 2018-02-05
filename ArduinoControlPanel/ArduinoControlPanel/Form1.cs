@@ -95,12 +95,7 @@ namespace ArduinoControlPanel
         {
             myport.WriteLine("B");
         }
-        /*
-        private void Action2Button(object sender, EventArgs e)
-        {
-            myport.WriteLine("3");
-        }
-        */
+       
         private void Action2(object sender, EventArgs e)        // Action 2 button
         {
 
@@ -108,7 +103,7 @@ namespace ArduinoControlPanel
 
         private void GetConnected(object sender, EventArgs e)   // Button for connecting
         {
-
+            myport.WriteLine("Connect!");       //Send command to controller
         }
     }
 }

@@ -16,7 +16,7 @@ int main()
 	int sum = 0, sum1 = 0, sum2 = 0;
 	cout << "Input your 3 numbers\n";		//Print message to input
 	
-	cin >> n;							//Read n
+	cin >> n;								//Read n
 
 	while (n > 0)
 	{

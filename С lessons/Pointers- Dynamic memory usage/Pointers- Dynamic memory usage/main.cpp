@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
+#include "vector.h"
 
-double* p;
-int size;   // размер выделоенного массива
+
+double* p;  // указатель на double
+int size;   // размер выделенного массива
 int count;  // сколько элементов массива занято
 
 
@@ -61,14 +63,26 @@ void GetIn(double v)
 
 int main(int argc, const char * argv[])
 {
-    createArray();
+    noyanov::vector a;
     for(double v = 1; v < 1000; v = v + 0.5) {
-        push_back(v);
+        a.push_back(v);
     }
-    for(int i = 0 ; i < getCount(); i++) {
-        printf("%lf\n", get(i));
+    for(int i = 0 ; i < a.getCount(); i++) {
+        printf("%lf\n", a.get(i));
     }
-               
-    deleteArray();
+    
+    noyanov::vector b;
+    
+
+//
+//    createArray();
+//    for(double v = 1; v < 1000; v = v + 0.5) {
+//        push_back(v);
+//    }
+//    for(int i = 0 ; i < getCount(); i++) {
+//        printf("%lf\n", get(i));
+//    }
+//
+//    deleteArray();
     return 0;
 }

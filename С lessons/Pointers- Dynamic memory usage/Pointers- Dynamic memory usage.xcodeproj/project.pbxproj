@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A4B3C4C52039AEC800F93CCA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B3C4C42039AEC800F93CCA /* main.cpp */; };
+		A4B3C4E02039D72C00F93CCA /* array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B3C4DE2039D72C00F93CCA /* array.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		A4B3C4C12039AEC800F93CCA /* Pointers- Dynamic memory usage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Pointers- Dynamic memory usage"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B3C4C42039AEC800F93CCA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A4B3C4DE2039D72C00F93CCA /* array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array.cpp; sourceTree = "<group>"; };
+		A4B3C4DF2039D72C00F93CCA /* array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = array.hpp; sourceTree = "<group>"; };
+		A4B3C4E12039F50200F93CCA /* vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 		A4B3C4B82039AEC800F93CCA = {
 			isa = PBXGroup;
 			children = (
+				A4B3C4DE2039D72C00F93CCA /* array.cpp */,
+				A4B3C4DF2039D72C00F93CCA /* array.hpp */,
 				A4B3C4C32039AEC800F93CCA /* Pointers- Dynamic memory usage */,
 				A4B3C4C22039AEC800F93CCA /* Products */,
 			);
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B3C4C42039AEC800F93CCA /* main.cpp */,
+				A4B3C4E12039F50200F93CCA /* vector.h */,
 			);
 			path = "Pointers- Dynamic memory usage";
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B3C4C52039AEC800F93CCA /* main.cpp in Sources */,
+				A4B3C4E02039D72C00F93CCA /* array.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

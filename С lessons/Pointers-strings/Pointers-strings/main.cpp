@@ -8,8 +8,15 @@
 
 #include <iostream>
 
+
+//    Различие между следующими определениями:
+char amessage[] = "now is the time";
+char *pmessage = "now is the time";
+// В amessage помещается именно столько символов и знак \n,
+//  а pmessage - указатель, значение которого можно изменить 
+
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
     return 0;
 }

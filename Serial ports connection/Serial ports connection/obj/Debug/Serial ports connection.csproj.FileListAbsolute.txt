@@ -1,0 +1,5 @@
+C:\Users\alex\Documents\My-Projects\Serial ports connection\Serial ports connection\bin\Debug\Serial ports connection.exe.config
+C:\Users\alex\Documents\My-Projects\Serial ports connection\Serial ports connection\obj\Debug\Serial ports connection.csprojResolveAssemblyReference.cache
+C:\Users\alex\Documents\My-Projects\Serial ports connection\Serial ports connection\obj\Debug\Serial_ports_connection.Form1.resources
+C:\Users\alex\Documents\My-Projects\Serial ports connection\Serial ports connection\obj\Debug\Serial_ports_connection.Properties.Resources.resources
+C:\Users\alex\Documents\My-Projects\Serial ports connection\Serial ports connection\obj\Debug\Serial ports connection.csproj.GenerateResource.Cache

@@ -1,0 +1,13 @@
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\bin\Debug\ArduinoControlPanel.exe.config
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.exe
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.pdb
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\bin\Debug\ArduinoControlPanel.exe.manifest
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\bin\Debug\ArduinoControlPanel.application
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\bin\Debug\ArduinoControlPanel.exe
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\bin\Debug\ArduinoControlPanel.pdb
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.csprojResolveAssemblyReference.cache
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.Form1.resources
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.Properties.Resources.resources
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.csproj.GenerateResource.Cache
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.exe.manifest
+C:\Users\alex\Documents\My-Projects\ArduinoControlPanel\ArduinoControlPanel\obj\Debug\ArduinoControlPanel.application

@@ -12,6 +12,8 @@
 
 int a[SIZE] = {12,21,33,33,45,54,0,0,1,2,3,4};     // Array of integers
 
+float b[SIZE] = {0.5,1,2,3,4,0.5,0.5,1,2,12,1,12};  // Array of floats
+
 int SumOfNumbers(int a){
     
     int sum = 0;    // Sum of numbers
@@ -34,7 +36,6 @@ void FindPairs(int *a)
           printf("%d\n",a[i+1]);
         }
     }
-    
 }
 
 

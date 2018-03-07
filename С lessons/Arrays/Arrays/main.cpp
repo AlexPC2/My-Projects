@@ -26,6 +26,22 @@ int SumOfNumbers(int a){
     return sum;
 }
 
+int CountFloats( float *b){
+    
+    int counter = 0;    // Counter of numbers
+    
+    for (int i = 0; i < SIZE; i++){
+        
+    }
+    int reverseFractiom =  0;   // Fraction part of numbers in reverse
+    
+    
+    // Find fraction part of number:
+    
+    
+    return counter;
+}
+
 // Find equal sum of numbers pairs:
 void FindPairs(int *a)
 {
@@ -43,9 +59,6 @@ int main(int argc, const char * argv[]) {
     
     FindPairs(a);
     
-    // insert code here...
-//    std::cout << "Sum of numbers in number 123\n";
-//    std::cout << " = ";
-//    std::cout << SumOfNumbers(123);
+    
     return 0;
 }

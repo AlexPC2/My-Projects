@@ -13,7 +13,6 @@
 #define MAXWORD 100
 #define NKEYS 128
 
-
 // Structure named key:
 struct key{
     char *word;

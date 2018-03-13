@@ -20,7 +20,7 @@ struct key{
     int count;
 };
 
-// Arrays of structures:
+// Arrays of structures key:
 struct key keytab[NKEYS];
 
 int getword(char *, int);
@@ -40,6 +40,31 @@ int main(int argc, const char * argv[]) {
     for(p = keytab; p < keytab; p++)
         if(p->count > 0)
             printf("%4d %s\n", p->count,p->word);
-    
     return 0;
 }
+
+
+// Discribing all main functions:
+
+/* binsearch: найти слово word в tab[0]..tab[n-1] */
+struct key *binsearch(char *word, struct key *tab, int n)
+{
+    int cond;
+    struct key *low = &tab[0];
+    struct key *high = &tab[n];
+    struct key *mid;
+    
+    while( low < high ){
+        mid = low + (high-low)/2;
+        if((cond = strcmp(word, mid->word)) < 0)
+            high = mid;
+        else if(cond > 0)
+            low = mid + 1;
+        else
+            return mid;
+    }
+    
+    return NULL;
+}
+
+

@@ -53,7 +53,7 @@ float a[SIZEY][SIZEX] = // Один элемент в левом верхнем 
  
  };
 */
- 
+ /*
  
 float a[SIZEY][SIZEX] = // 12 элементов
 {
@@ -116,3 +116,29 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+*/
+
+#include <stdio.h>
+
+int main(){
+    
+    int i;
+    
+    printf("Symbols: \n");
+    
+    for(i = 0; i < 128; i++)
+    {
+        //printf("%c", i);
+        putchar(i);
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+

@@ -8,15 +8,31 @@
 
 #include <iostream>
 
+
+/*
+
+        Parent
+            |
+        ____|_____
+        | Element|
+        | data   |
+        \________/
+         /     \
+        /       \
+    Left       Right
+ 
+ */
+
+
 typedef int TData;
-struct TTreeItem
+struct TTreeItem        // Tree element
 {
-    TData data;
-    TTreeItem *parent;
-    TTreeItem *left;
-    TTreeItem *right;
+    TData data;         // Value
+    TTreeItem *parent;  // Parent
+    TTreeItem *left;    // Left element
+    TTreeItem *right;   // Right
     
-    TTreeItem(TData adata, TTreeItem* aparent) {
+    TTreeItem(TData adata, TTreeItem* aparent) {    // Constuctor
         data = adata;
         parent = aparent;
         left = NULL;
@@ -68,7 +84,7 @@ void inverseList(TListItem* head)
     }
 }
 
-void addToTree(TTreeItem* root, TData data)
+void addToTree(TTreeItem* root, TData data)             // Add new element to tree
 {
     if(data < root->data) {
         if(root->left != NULL)
@@ -105,12 +121,12 @@ TData maxTreeValue(TTreeItem* root)
     return 0;
 }
 
-void printTree(TTreeItem* root)
+void printTree(TTreeItem* root)     // Print tree using recursive algorithm
 {
     if(root != NULL) {
-        printTree(root->left);
-        std::cout << root->data << " ";
-        printTree(root->right);
+        printTree(root->left);              // Print left part
+        std::cout << root->data << " ";     // Space
+        printTree(root->right);             // Print right part
     }
 }
 

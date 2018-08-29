@@ -9,6 +9,9 @@
 // Lesson about classes constructors with parameters
 
 #include <iostream>
+#include <mm_malloc.h>
+#include <string>
+#include <stdlib.h>
 
 #define SIZE 255
 
@@ -68,7 +71,34 @@ char stack::pop(){
 }
 
 //  ===== Новый класс strtype, в котором используется конструктор с параметрами =====
- 
+class strtype{
+    char* p;        // Строка
+    int len;        // Длина строки
+public:
+    strtype(char *ptr);     // Конструктор, прнимающий строку, как параметр
+    ~strtype();             // Деструктор (не принимает ничего соответственно)
+    void show();
+};
+
+strtype::strtype(char* ptr){
+    len = strlen(ptr);
+    p = (char*) malloc(len+1);
+    
+    if(!p){
+        cout << "Ошибка выделения памяти! \n";
+    }
+}
+
+strtype::~strtype(){
+    cout <<  "Освоюождение памяти..." ;
+    free(p);
+}
+
+void strtype::show(){
+    cout << p << "- длина:" << len;
+    cout << "\n";
+}
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -95,6 +125,12 @@ int main(int argc, const char * argv[]) {
     // Это вызывет сообщение об ошибке:
     //for(i = 0; i < 3; i++ ) cout << "Символ из стека А" << s1.pop(); << "\n";
      //for(i = 0; i < 3; i++ ) cout << "Символ из стека В" << s2.pop(); << "\n";
+    
+    
+    // ==== Пример со строками ====
+    strtype str1("Это проверка"), str2(" Я люблю С++");
+    str1.show();
+    str2.show();
     
     return 0;
 }

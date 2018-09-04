@@ -36,10 +36,10 @@
 using namespace std;
 
 // Использование структыря для определения типа класса:
-struct st_type {
-	st_type(double b,char *n);
+struct st_type {					// Структура
+	st_type(double b,char *n);		// Все, что не ptivate, то открыто
 	void show();
-private:
+private:							// Закрытые поля структуры
 	double balance;
 	char name[32];
 };
@@ -57,13 +57,26 @@ void st_type::show() {
 	cout << "\n";
 }
 
+// Перепишем то же самое, но с использованием класса:
+clsss sl_type{
+	double balance;
+	char name[40];
+public:
+	sl_type(double b, char*n);
+	void show();
+};
+
 int main()
 {
+
+	//	==== Пример с использоавнием структуры, вместо класса	====
 	st_type			acc1(100.12, "Johnson");
 	st_type			acc2(-12.34, "Hedricks");
 
 	acc1.show();
 	acc2.show();
+
+	// ==== То же самое, но с использованием класса		====
 
     return 0;
 }

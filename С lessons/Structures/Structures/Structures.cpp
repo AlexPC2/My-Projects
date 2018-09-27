@@ -13,11 +13,11 @@ struct point {
 };
 
 struct rect {
-	struct point pt1;
-	struct point pt2;
+	point pt1;
+	point pt2;
 };
 
-struct point makepoint(int x, int y)
+point makepoint(int x, int y)
 {
 	struct point temp;
 
@@ -26,15 +26,10 @@ struct point makepoint(int x, int y)
 	return temp;
 };
 
-struct rect screen;
+rect screen;
 struct point middle;
 struct point makepoint(int,int);
 
-screen.pt1 = makepoint( 0,0 );
-screen.pt2 = makepoint( XMAX, YMAX);
-
-middle = makepoint((screen.pt1.x + screen.pt2.x)/2,
-					(screen.pt1.y+screen.pt2.y)/2);
 
 /*	addpoint: сложение двух точек*/
 struct point addpoint(struct point p1, struct point p2)
@@ -42,8 +37,16 @@ struct point addpoint(struct point p1, struct point p2)
 	p1.x += p2.x;
 	p1.y += p2.y;
 	return p1;
+
+	//	Эта функция принимает и возвращает структуру point
 }
 
+<<<<<<< HEAD
+/*	prinrect: возвращает 1, если p в r, и 0 в противном случае	*/
+int prinrect(struct point p, struct rect r)
+{
+	
+=======
 /* Return 1 if p in r or 0 if not*/
     int printrect( struct point p, struct rect r)
 {
@@ -69,11 +72,21 @@ struct rect cannonrect(struct rect r)
     
     temp.pt2.x = min(r.pt1.x, r.pt2.x);
     temp.pt2.y = max(r.pt1.y, r.pt2.y);
+>>>>>>> 79976fa24a5442140685b383401109c9abb3e488
 }
 
 
 int main()
 {
+<<<<<<< HEAD
+	screen.pt1 = makepoint(0, 0);
+	screen.pt2 = makepoint(XMAX, YMAX);
+
+	middle = makepoint((screen.pt1.x + screen.pt2.x) / 2,
+		(screen.pt1.y + screen.pt2.y) / 2);
+	
+	return 0;
+=======
     
     // For big structers can be effective do not copy all structure
     //  just send some structure elements using pointers:
@@ -121,6 +134,7 @@ int main()
     // Now ++ operator will be executing first
     
     return 0;
+>>>>>>> 79976fa24a5442140685b383401109c9abb3e488
 }
 
 

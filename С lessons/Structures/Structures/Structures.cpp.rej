@@ -1,0 +1,10 @@
+diff a/С lessons/Structures/Structures/Structures.cpp b/С lessons/Structures/Structures/Structures.cpp	(rejected hunks)
+@@ -1,6 +1,8 @@
+ // Structures.cpp: ���������� ����� ����� ��� ����������� ����������.
+ //
+ 
++// Chapter 6
++
+ #include "stdafx.h"
+ 
+ /*	makepoint : ��������� ����� �� ����������� x � y*/

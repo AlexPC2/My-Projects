@@ -39,6 +39,14 @@ struct point addpoint(struct point p1, struct point p2)
 	return p1;
 
 	//	Эта функция принимает и возвращает структуру point
+<<<<<<< HEAD
+}
+
+/*	prinrect: возвращает 1, если p в r, и 0 в противном случае	*/
+int prinrect(struct point p, struct rect r)
+{
+	
+=======
 }
 
 <<<<<<< HEAD
@@ -73,12 +81,16 @@ struct rect cannonrect(struct rect r)
     temp.pt2.x = min(r.pt1.x, r.pt2.x);
     temp.pt2.y = max(r.pt1.y, r.pt2.y);
 >>>>>>> 79976fa24a5442140685b383401109c9abb3e488
+>>>>>>> 5633b5738b45d867ca778b7bb2bdba27849ef1db
 }
 
 
 int main()
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5633b5738b45d867ca778b7bb2bdba27849ef1db
 	screen.pt1 = makepoint(0, 0);
 	screen.pt2 = makepoint(XMAX, YMAX);
 
@@ -86,6 +98,8 @@ int main()
 		(screen.pt1.y + screen.pt2.y) / 2);
 	
 	return 0;
+<<<<<<< HEAD
+=======
 =======
     
     // For big structers can be effective do not copy all structure
@@ -135,6 +149,7 @@ int main()
     
     return 0;
 >>>>>>> 79976fa24a5442140685b383401109c9abb3e488
+>>>>>>> 5633b5738b45d867ca778b7bb2bdba27849ef1db
 }
 
 

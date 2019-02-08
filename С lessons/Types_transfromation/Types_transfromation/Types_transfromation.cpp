@@ -92,4 +92,11 @@ int main()
 =======
 // Changed by AlexMacBookPro
 
+<<<<<<< HEAD
 >>>>>>> 2f0b60843388ca76210b2619f2ab24a8fcd6104f
+=======
+<<<<<<< HEAD
+// comment!
+=======
+>>>>>>> 20099cad1a605768131f5505aff52b552c8c7e01
+>>>>>>> origin/AlexMacBookPro

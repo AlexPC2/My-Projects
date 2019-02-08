@@ -82,4 +82,9 @@ int main()/* Counting numbers, letters and other symbols */
     return 0;
 }
 
+<<<<<<< HEAD
 // Master branch commit!
+=======
+//  Branch master merged to AlexMacbookPro
+
+>>>>>>> origin/AlexMacBookPro

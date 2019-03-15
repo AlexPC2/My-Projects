@@ -105,8 +105,6 @@ int main(int argc, const char * argv[]) {
          B += B is equivalent to A/=2
          */
         
-        
-        
 //        if (a+=a == b/2)
 //        {
 //            a += a;

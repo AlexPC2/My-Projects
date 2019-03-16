@@ -99,7 +99,6 @@ int main(int argc, const char * argv[]) {
     while (a != b)
     {
         // Alghorithm:
-        
         /*
          A += A is equivalent to B/=2
          B += B is equivalent to A/=2

@@ -83,9 +83,9 @@ int main(int argc, const char * argv[]) {
     clock_t start_clock = clock();
     // ==== Код, который выполняется: ====
    
-    //sinPlusCos(10000000, value);
+    sinPlusCos(10000000, value);
     
-    creatingVector(10000000);
+    //creatingVector(10000000);
     
     //simple(100000, &value, &value);
     

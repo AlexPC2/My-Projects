@@ -63,6 +63,17 @@ void printTreeInverse(TTreeItem* root)                  // Print tree inverse
     }
 }
 
+//void printTree_Left_Right_Root(TTreeItem* root)
+//{
+//    if(root != NULL)
+//    {
+//        std::cout << root->data << " ";
+//        printTreeInverse(root->right);
+//
+//        printTreeInverse(root->left);
+//    }
+//}
+
 int main(int argc, const char * argv[]) {
     int numberOfElements;
     cout << "   === Input number of the numbers in the tree: ===" << endl;
@@ -84,6 +95,8 @@ int main(int argc, const char * argv[]) {
     
     cout <<endl<<  "=== Now print your tree inverse ===" << endl;
     printTreeInverse(treeRoot);
+    
+
     
     
     return 0;

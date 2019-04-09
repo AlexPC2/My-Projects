@@ -153,11 +153,11 @@ void printTreeAlex(TTreeItem* root)
     
     while(root->right != NULL )             // After the top
     {
-        root = root->left;                  // Go to the left
-        std::cout << root->data << "\n";    // Print data;
+        root = root->left;                 // Go to the left
+        std::cout << root->data << "\n";     // Print data;
         root = root->parent;                // Go to the parent
         root = root->right;                 // Then go to the right element
-        std::cout << root->data << "\n";    // Print in
+        std::cout << root->data << "\n";      // Print in
     }
 }
 

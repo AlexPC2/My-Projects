@@ -96,8 +96,5 @@ int main(int argc, const char * argv[]) {
     cout <<endl<<  "=== Now print your tree inverse ===" << endl;
     printTreeInverse(treeRoot);
     
-
-    
-    
     return 0;
 }

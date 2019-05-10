@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D9B3B90A2286276C006D5E95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9B3B9092286276C006D5E95 /* main.cpp */; };
+		D9B3B91122862A10006D5E95 /* temperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9B3B91022862A10006D5E95 /* temperature.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		D9B3B9062286276C006D5E95 /* Coursera_average_temp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursera_average_temp; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B3B9092286276C006D5E95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D9B3B91022862A10006D5E95 /* temperature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = temperature.cpp; path = Coursera_average_temp/temperature.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		D9B3B8FD2286276C006D5E95 = {
 			isa = PBXGroup;
 			children = (
+				D9B3B91022862A10006D5E95 /* temperature.cpp */,
 				D9B3B9082286276C006D5E95 /* Coursera_average_temp */,
 				D9B3B9072286276C006D5E95 /* Products */,
 			);
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B3B91122862A10006D5E95 /* temperature.cpp in Sources */,
 				D9B3B90A2286276C006D5E95 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

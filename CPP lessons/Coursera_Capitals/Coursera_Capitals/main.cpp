@@ -56,7 +56,6 @@ int main(int argc, const char * argv[]) {
     //std::cout << "Hello, World!\n";
     
     map<string,string> CountryBooks;            //
-    
     int k;
     cin >> k;
     string userCommand;
@@ -77,11 +76,11 @@ int main(int argc, const char * argv[]) {
                 // If country is new:
                 if(CountryBooks.find(newCapital) == CountryBooks.end()){
                     cout << "Introduce new country " << country << " with capital " << newCapital << endl;
-                    CountryBooks.insert(pair<string, string>(newCapital,country));
+                    CountryBooks.insert(pair<string, string>(country,newCapital));
                 }
                 
                 // If country hasn't changed:
-                if(CountryBooks.find(country)->first == newCapital){
+                if(CountryBooks.find(country)->second == newCapital && CountryBooks.size()!= 1){
                     cout << "Country " << country << " hasn't changed its capital" << endl;
                 }else{
                     // If country exist and changing:
@@ -116,7 +115,7 @@ int main(int argc, const char * argv[]) {
                         cout << "There are no countries in the world"<<endl;
                     }else{
                         for(auto m:CountryBooks){
-                            cout << m.second << " " << m.first << endl;
+                            cout << m.first << " " << m.second << endl;
                         }
                     }
                 

@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <math.h>
-
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -79,6 +79,8 @@ int main(int argc, const char * argv[]) {
     else
         cout << mess << endl;
 
-
+    vector<int> nums = {3,2,1};
+    cout << min(2,3)<< endl;
+    sort(begin(nums), end(nums));
     return 0;
 }

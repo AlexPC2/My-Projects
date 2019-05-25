@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Prizon_cells_after_N_days", "Prizon_cells_after_N_days\Prizon_cells_after_N_days.vcxproj", "{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Debug|x64.ActiveCfg = Debug|x64
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Debug|x64.Build.0 = Debug|x64
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Debug|x86.ActiveCfg = Debug|Win32
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Debug|x86.Build.0 = Debug|Win32
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Release|x64.ActiveCfg = Release|x64
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Release|x64.Build.0 = Release|x64
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Release|x86.ActiveCfg = Release|Win32
+		{A6A41ABF-B73C-4D55-8D90-573B806C0A5C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF6F75BE-245B-41FC-84F6-887C1C890B5B}
+	EndGlobalSection
+EndGlobal

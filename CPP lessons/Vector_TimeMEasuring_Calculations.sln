@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vector_TimeMEasuring_Calculations", "Vector_TimeMEasuring_Calculations\Vector_TimeMEasuring_Calculations.vcxproj", "{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Debug|x64.ActiveCfg = Debug|x64
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Debug|x64.Build.0 = Debug|x64
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Debug|x86.ActiveCfg = Debug|Win32
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Debug|x86.Build.0 = Debug|Win32
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Release|x64.ActiveCfg = Release|x64
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Release|x64.Build.0 = Release|x64
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Release|x86.ActiveCfg = Release|Win32
+		{FA13C207-4E31-454E-9B4A-CDE6BDF33E21}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9379CF31-13C6-4826-889A-7CBA5F325901}
+	EndGlobalSection
+EndGlobal

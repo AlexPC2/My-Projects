@@ -8,7 +8,6 @@
 
 #include <iostream>
 
-
 /*
 
         Parent
@@ -40,7 +39,6 @@ struct TTreeItem        // Tree element
     }
 };
 
-
 struct TListItem
 {
     TData data;
@@ -51,7 +49,6 @@ struct TListItem
         next = NULL;
     }
 };
-
 
 TListItem* tail(TListItem *head)
 {
@@ -142,22 +139,22 @@ void printTreeInverse(TTreeItem* root)
 
 void printTreeAlex(TTreeItem* root)
 {
-    while(root->parent != NULL)             // Before the top
+    while(root->parent != NULL)              // Before the top
     {
-        std::cout << root->data << "\n";    // Print data;
+        std::cout << root->data << "\n";     // Print data;
         root = root->parent;                // Go to the parent
         root = root->right;                 // Then go to the right element
-        std::cout << root->data << "\n";    // Print in
+        std::cout << root->data << "\n";     // Print in
         root = root->parent;                // Go to the parent again
     }
     
     while(root->right != NULL )             // After the top
     {
-        root = root->left;                  // Go to the left
-        std::cout << root->data << "\n";    // Print data;
+        root = root->left;                 // Go to the left
+        std::cout << root->data << "\n";     // Print data;
         root = root->parent;                // Go to the parent
         root = root->right;                 // Then go to the right element
-        std::cout << root->data << "\n";    // Print in
+        std::cout << root->data << "\n";      // Print in
     }
 }
 

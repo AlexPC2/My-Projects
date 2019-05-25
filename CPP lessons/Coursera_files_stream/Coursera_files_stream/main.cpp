@@ -64,7 +64,6 @@
 //    return 0;
 //}
 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -76,6 +75,13 @@ using namespace std;
 struct Duration{
     int hour;
     int min;
+
+    Duration(int h,int m){
+        int total = h*60 +m;
+        hour = total/60;
+        min = total%60;
+    }
+    Duration(){};
 };
 
 Duration ReadDuration(istream& stream){
@@ -93,14 +99,14 @@ Duration ReadDuration(istream& stream){
 //    setw(2) << duration.min;
 //}
 
-// Operator:
+// Operator to print :
 ostream& operator << (ostream& stream,Duration& duration){
     stream << setfill('0');
     stream << setw(2) << duration.hour << ':' <<
     setw(2) << duration.min;
     return stream;
 }
-
+// Operator to read:
 istream& operator >> (istream& stream, Duration& duration){
     stream >> duration.hour;
     stream.ignore(1);
@@ -108,13 +114,32 @@ istream& operator >> (istream& stream, Duration& duration){
     return stream;
 }
 
+// Operator to compare to structures
+Duration operator + (const Duration& lhs, const Duration& rhs){
+    return Duration{lhs.hour+rhs.hour,lhs.min+rhs.min};
+}
+// Another operator for sorting
+bool operator < (const Duration& lhs, const Duration& rhs){
+    if(lhs.hour == rhs.hour)
+        return lhs.min < rhs.min;
+    return lhs.hour < rhs.hour;
+}
+
 int main(){
     //stringstream dur_ss("01:50");
     //Duration dur1 = ReadDuration(dur_ss);
     //PrintDuration(cout, dur1);
-    Duration dur1;
+    
+    Duration dur1,dur2;
     cin >> dur1;
-    cout << dur1 << endl;
+    cin >> dur2;
+    Duration dur3 = dur1 + dur2;
+    cout << dur3 << endl;
+    vector<Duration> v{ dur1,dur2,dur3};
+    sort(v.begin(), v.end());               // Sorting from lower to higher
+    for(auto s: v){
+        cout << s << endl;
+    }
     
     return 0;
 }

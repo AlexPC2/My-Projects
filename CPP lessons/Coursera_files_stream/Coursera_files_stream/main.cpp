@@ -64,7 +64,6 @@
 //    return 0;
 //}
 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -76,6 +75,13 @@ using namespace std;
 struct Duration{
     int hour;
     int min;
+
+    Duration(int h,int m){
+        int total = h*60 +m;
+        hour = total/60;
+        min = total%60;
+    }
+    Duration(){};
 };
 
 Duration ReadDuration(istream& stream){
@@ -108,13 +114,19 @@ istream& operator >> (istream& stream, Duration& duration){
     return stream;
 }
 
+Duration operator + (const Duration& lhs, const Duration& rhs){
+    return Duration{lhs.hour+rhs.hour,lhs.min+rhs.min};
+}
+
 int main(){
     //stringstream dur_ss("01:50");
     //Duration dur1 = ReadDuration(dur_ss);
     //PrintDuration(cout, dur1);
-    Duration dur1;
+    Duration dur1,dur2;
     cin >> dur1;
-    cout << dur1 << endl;
+    cin >> dur2;
+    Duration dur3 = dur1 + dur2;
+    cout << dur3 << endl;
     
     return 0;
 }

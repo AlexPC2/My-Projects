@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  Coursera_Rational_3
+//  Coursera_Rational_exception
 //
 //  Created by Александр Ноянов on 26/05/2019.
 //  Copyright © 2019 MPEI. All rights reserved.
@@ -13,8 +13,8 @@ using namespace std;
 class Rational
 {
 public:
-    Rational(){num = 0; denom = 1;};
-    Rational(int numerator, int denominator);
+    Rational() {num = 0; denom = 1;};
+    Rational(int numerator, int denominator) ;
     
     int Numerator() const;
     int Denominator() const;
@@ -32,7 +32,10 @@ int Rational::Denominator()const{
     return denom;
 }
 
-Rational::Rational(int numerator, int denominator){
+Rational::Rational(int numerator, int denominator)
+{
+    if(denominator == 0)
+        throw invalid_argument("Denominator == 0");
     if(numerator == 0){
         denom = 1;
         num = 0;
@@ -45,7 +48,7 @@ Rational::Rational(int numerator, int denominator){
             numerator = -numerator;
             denominator = -denominator;
         }
-
+        
         if(numerator<0 && denominator>0){
             isNegative = true;
             numerator = numerator*(-1);
@@ -77,52 +80,30 @@ Rational::Rational(int numerator, int denominator){
 }
 
 // Overloadede operators for Rational numbers:
-Rational operator + (Rational l,Rational r){
-    return Rational(l.Numerator()*r.Denominator()+r.Numerator()*l.Denominator(),l.Denominator()*r.Denominator());
-}
 
-bool operator == (Rational l,Rational r){
-    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
-        return true;
-    }else{
-        return false;
+Rational operator / (const Rational& l,const Rational& r)
+{
+    try {
+        Rational res(l.Numerator()*r.Denominator(), l.Denominator()*r.Numerator());
+        return res;
+    } catch(const invalid_argument& e) {
+        throw domain_error("Error in /");
     }
-}
-
-Rational operator - (Rational l, Rational r){
-    return Rational(l.Numerator()*r.Denominator()-r.Numerator()*l.Denominator(),l.Denominator()*r.Denominator());
-}
-
-Rational operator * (Rational l, Rational r){
-    return Rational(l.Numerator()*r.Numerator(), l.Denominator()*r.Denominator());
-}
-
-Rational operator / (const Rational& l,const Rational& r){
-    Rational res(l.Numerator()*r.Denominator(), l.Denominator()*r.Numerator());
-    return res;
 }
 
 int main() {
-{
-        Rational a(2, 3);
-        Rational b(4, 3);
-        Rational c = a * b;
-        bool equal = c == Rational(8, 9);
-        if (!equal) {
-            cout << "2/3 * 4/3 != 8/9" << endl;
-            return 1;
-        }
+    try {
+        Rational r(1, 0);
+        cout << "Doesn't throw in case of zero denominator" << endl;
+        return 1;
+    } catch ( std::invalid_argument& e) {
     }
     
-    {
-        Rational a(5, 4);
-        Rational b(15, 8);
-        Rational c = a / b;
-        bool equal = c == Rational(2, 3);
-        if (!equal) {
-            cout << "5/4 / 15/8 != 2/3" << endl;
-            return 2;
-        }
+    try {
+        auto x = Rational(1, 2) / Rational(0, 1);
+        cout << "Doesn't throw in case of division by zero" << endl;
+        return 2;
+    } catch (domain_error&) {
     }
     
     cout << "OK" << endl;

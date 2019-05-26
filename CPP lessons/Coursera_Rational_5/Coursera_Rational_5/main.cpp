@@ -11,13 +11,14 @@
 #include <iomanip>
 #include <vector>
 #include <set>
-
+#include <map>
 
 using namespace std;
 
-class Rational {
+class Rational
+{
 public:
-    Rational(){num = 0; denom = 1;};
+    Rational() {num = 0; denom = 1;};
     Rational(int numerator, int denominator);
     int Numerator() const;
     int Denominator() const;
@@ -28,15 +29,30 @@ public:
 private:
     int num;
     int denom;
+    
+public:
+    // Increments operators:
+    Rational& operator ++() {        // Prefix increment
+        num+= denom;
+        Set(num, denom);
+        return *this;
+    }
+    
+//    Rational operator ++(int){
+//        Rational rt = *this;
+//        ++*this;
+//        return rt;
+//    }
+    
 };
 
-string Rational::NumeratorStr()const{
+string Rational::NumeratorStr() const{
     stringstream stream;
     stream << num;
     return stream.str();
 }
 
-string Rational::DenominatorStr()const{
+string Rational::DenominatorStr() const{
     stringstream stream;
     stream << denom;
     return stream.str();
@@ -144,6 +160,16 @@ bool operator == (Rational l,Rational r){
     }
 }
 
+//bool operator != (Rational l, Rational r){
+//    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
+//        return false;
+//    }else{
+//        return true;
+//    }
+//}
+
+
+
 Rational operator - (Rational l, Rational r){
     return Rational(l.Numerator()*r.Denominator()-r.Numerator()*l.Denominator(),l.Denominator()*r.Denominator());
 }
@@ -154,6 +180,31 @@ Rational operator * (Rational l, Rational r){
 
 Rational operator / (Rational l, Rational r){
     return Rational(l.Numerator()*r.Denominator(),l.Denominator()*r.Numerator());
+}
+
+// Operators < and >:
+//bool operator > (Rational l, Rational r){
+//    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
+//        return false;
+//    }else{
+//        if(l.Denominator() == r.Denominator()){
+//            return l.Numerator() > r.Numerator();
+//        }
+//        return l.Denominator() > r.Denominator();
+//    }
+//}
+
+bool operator < (Rational l, Rational r)
+{
+    return ((double)l.Numerator() / (double)l.Denominator()) < ((double)r.Numerator() / (double)r.Denominator());
+//    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
+//        return true;
+//    }else{
+//        if(l.Denominator() == r.Denominator()){
+//            return l.Numerator() < r.Numerator();
+//        }
+//        return l.Denominator() < r.Denominator();
+//    }
 }
 
 // Operator to print :
@@ -183,11 +234,15 @@ istream& operator >> (istream& stream, Rational& r){
     return stream;
 }
 
+
+
+
 int main() {
     {
         const set<Rational> rs = {{1, 2}, {1, 25}, {3, 4}, {3, 4}, {1, 2}};
         if (rs.size() != 3) {
             cout << "Wrong amount of items in the set" << endl;
+            cout << "Size of the set:" << rs.size() << endl;
             return 1;
         }
         
@@ -208,8 +263,10 @@ int main() {
         
         ++count[{2, 3}];
         
+        
         if (count.size() != 2) {
             cout << "Wrong amount of items in the map" << endl;
+            
             return 3;
         }
     }

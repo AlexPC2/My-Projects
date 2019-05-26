@@ -31,23 +31,27 @@ int Rational::Denominator()const{
     return denom;
 }
 
-Rational::Rational(int numerator, int denominator){
-    if(numerator == 0){
+Rational::Rational(int numerator, int denominator)
+{
+    if(numerator == 0) {
         denom = 1;
         num = 0;
-    }else{
+    } else {
     int a, b;
     float p=0.0, q=0.0;
     bool isNegative = false;
     
+    if(denominator<0 && numerator<0){
+        numerator = -numerator;
+        denominator = -denominator;
+    }
     if(numerator<0 && denominator>0){
         isNegative = true;
-        numerator = numerator*(-1);
+        numerator = -numerator;
     }
-    
     if(denominator<0 && numerator >0){
         isNegative = true;
-        denominator = denominator*(-1);
+        denominator = -denominator;
     }
     
     a = numerator;
@@ -57,8 +61,6 @@ Rational::Rational(int numerator, int denominator){
     
     for(int i=1; i<=a && i<=b; i++)
     {
-       // float aa=a%i;
-       // float bb=b%i;
         if(!(a%i) && !(b%i))
         {
             num = a/i;

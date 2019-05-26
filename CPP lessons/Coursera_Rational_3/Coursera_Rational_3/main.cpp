@@ -19,8 +19,8 @@ public:
     int Denominator() const;
     
 private:
-    int num;
-    int denom;
+    double num;
+    double denom;
 };
 
 int Rational::Numerator() const{
@@ -94,7 +94,8 @@ Rational operator * (Rational l, Rational r){
 }
 
 Rational operator / (Rational l, Rational r){
-    return Rational(l.Numerator()*r.Denominator(),l.Denominator()*r.Numerator());
+    Rational res(l.Numerator()*r.Denominator(),l.Denominator()*r.Numerator());
+    return res;
 }
 
 int main() {

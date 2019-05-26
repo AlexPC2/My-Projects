@@ -38,8 +38,8 @@ public:
     string DenominatorStr() const;
     
 private:
-    int num;
-    int denom;
+    double num;
+    double denom;
 };
 
 string Rational::NumeratorStr()const{
@@ -207,7 +207,9 @@ ostringstream& operator << (ostringstream& stream,Rational r){
 
 // Operator to read:
 istream& operator >> (istream& stream, Rational& r){
-    if(!stream.eof()){
+    if(!stream.eof() && stream.peek() != EOF)
+    {
+    //if(stream.rdbuf()->in_avail() != 0){
     int n,d;
     stream >> n;
     stream.ignore(1);

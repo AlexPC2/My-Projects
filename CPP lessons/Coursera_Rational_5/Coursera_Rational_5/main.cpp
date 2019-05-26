@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  Coursera_Rational_4
+//  Coursera_Rational_5
 //
 //  Created by Александр Ноянов on 26/05/2019.
 //  Copyright © 2019 MPEI. All rights reserved.
@@ -9,26 +9,14 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <vector>
+#include <set>
+
 
 using namespace std;
 
 class Rational {
 public:
-//    friend ostringstream& operator << (ostringstream& stream,Rational& r){
-//        stream << setfill('0');
-//        stream << setw(2) << r.Numerator()<< '/' <<
-//        setw(2) << r.Denominator();
-//        return stream;
-//    }
-//
-//    friend ostream& operator << (ostream& stream,Rational& r){
-//        //ostream& operator << (){
-//            stream << setfill('0');
-//            stream << setw(2) << r.Numerator()<< '/' <<
-//            setw(2) << r.Denominator();
-//            return stream;
-//    }
-    
     Rational(){num = 0; denom = 1;};
     Rational(int numerator, int denominator);
     int Numerator() const;
@@ -90,8 +78,6 @@ void Rational::Set(int numerator, int denominator)
         
         for(int i=1; i<=a && i<=b; i++)
         {
-            // float aa=a%i;
-            // float bb=b%i;
             if(!(a%i) && !(b%i))
             {
                 num = a/i;
@@ -131,8 +117,6 @@ Rational::Rational(int numerator, int denominator){
         
         for(int i=1; i<=a && i<=b; i++)
         {
-            // float aa=a%i;
-            // float bb=b%i;
             if(!(a%i) && !(b%i))
             {
                 num = a/i;
@@ -172,14 +156,6 @@ Rational operator / (Rational l, Rational r){
     return Rational(l.Numerator()*r.Denominator(),l.Denominator()*r.Numerator());
 }
 
-// Overloaded operators for printing to the streams:
-//istream& operator >> (istream& stream, Rational& r){
-//    stream >> r.Numerator();
-//    stream.ignore(1);
-//    stream >> r.Denominator();
-//    return stream;
-//}
-
 // Operator to print :
 ostream& operator << (ostream& stream,Rational& r){
     stream << setfill('0');
@@ -189,16 +165,6 @@ ostream& operator << (ostream& stream,Rational& r){
 }
 
 ostringstream& operator << (ostringstream& stream,Rational r){
-//    string d,n = "";
-//    Rational rt
-//    stream << setfill('0');
-//    stream << setw(2) << n<< '/' <<
-//    setw(2) << d;
-//    r.Set(atoi(n.c_str()),atoi(d.c_str()));
-    //cout << r << endl ;
-    //r.Set(r.Numerator(), r.Denominator());
-    //cout << r << endl ;
-    //stream << setfill('0');
     stream << r.Numerator() << '/' <<
     r.Denominator();
     
@@ -208,52 +174,43 @@ ostringstream& operator << (ostringstream& stream,Rational r){
 // Operator to read:
 istream& operator >> (istream& stream, Rational& r){
     if(!stream.eof()){
-    int n,d;
-    stream >> n;
-    stream.ignore(1);
-    stream >> d;
-    r.Set(n, d);
+        int n,d;
+        stream >> n;
+        stream.ignore(1);
+        stream >> d;
+        r.Set(n, d);
     }
     return stream;
 }
 
 int main() {
     {
-        ostringstream output;
-        output << Rational(-6, 8);
-        if (output.str() != "-3/4") {
-            cout << "Rational(-6, 8) should be written as \"-3/4\"" << endl;
+        const set<Rational> rs = {{1, 2}, {1, 25}, {3, 4}, {3, 4}, {1, 2}};
+        if (rs.size() != 3) {
+            cout << "Wrong amount of items in the set" << endl;
             return 1;
         }
-    }
-    
-    {
-        istringstream input("5/7");
-        Rational r;
-        input >> r;
-        bool equal = r == Rational(5, 7);
-        if (!equal) {
-            cout << "5/7 is incorrectly read as " << r << endl;
+        
+        vector<Rational> v;
+        for (auto x : rs) {
+            v.push_back(x);
+        }
+        if (v != vector<Rational>{{1, 25}, {1, 2}, {3, 4}}) {
+            cout << "Rationals comparison works incorrectly" << endl;
             return 2;
         }
     }
     
     {
-        istringstream input("5/7 10/8");
-        Rational r1, r2;
-        input >> r1 >> r2;
-        bool correct = r1 == Rational(5, 7) && r2 == Rational(5, 4);
-        if (!correct) {
-            cout << "Multiple values are read incorrectly: " << r1 << " " << r2 << endl;
-            return 3;
-        }
+        map<Rational, int> count;
+        ++count[{1, 2}];
+        ++count[{1, 2}];
         
-        input >> r1;
-        input >> r2;
-        correct = r1 == Rational(5, 7) && r2 == Rational(5, 4);
-        if (!correct) {
-            cout << "Read from empty stream shouldn't change arguments: " << r1 << " " << r2 << endl;
-            return 4;
+        ++count[{2, 3}];
+        
+        if (count.size() != 2) {
+            cout << "Wrong amount of items in the map" << endl;
+            return 3;
         }
     }
     

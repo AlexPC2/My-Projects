@@ -207,9 +207,10 @@ ostringstream& operator << (ostringstream& stream,Rational r){
 
 // Operator to read:
 istream& operator >> (istream& stream, Rational& r){
-    if(!stream.eof() && stream.peek() != EOF)
-    {
+//    if(!stream.eof() && stream.peek() != EOF)
+//    {
     //if(stream.rdbuf()->in_avail() != 0){
+    if (stream.peek() != '/'){
     int n,d;
     stream >> n;
     stream.ignore(1);
@@ -244,6 +245,7 @@ int main() {
         istringstream input("5/7 10/8");
         Rational r1, r2;
         input >> r1 >> r2;
+
         bool correct = r1 == Rational(5, 7) && r2 == Rational(5, 4);
         if (!correct) {
             cout << "Multiple values are read incorrectly: " << r1 << " " << r2 << endl;
@@ -253,6 +255,7 @@ int main() {
         input >> r1;
         input >> r2;
         correct = r1 == Rational(5, 7) && r2 == Rational(5, 4);
+
         if (!correct) {
             cout << "Read from empty stream shouldn't change arguments: " << r1 << " " << r2 << endl;
             return 4;

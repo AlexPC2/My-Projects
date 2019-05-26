@@ -10,7 +10,8 @@
 
 using namespace std;
 
-class Rational {
+class Rational
+{
 public:
     Rational(){num = 0; denom = 1;};
     Rational(int numerator, int denominator);
@@ -19,8 +20,8 @@ public:
     int Denominator() const;
     
 private:
-    double num;
-    double denom;
+    int num;
+    int denom;
 };
 
 int Rational::Numerator() const{
@@ -35,11 +36,16 @@ Rational::Rational(int numerator, int denominator){
     if(numerator == 0){
         denom = 1;
         num = 0;
-    }else{
+    } else {
         int a, b;
-        float p=0.0, q=0.0;
+        double p=0, q=0;
         bool isNegative = false;
         
+        if(numerator<0 && denominator<0){
+            numerator = -numerator;
+            denominator = -denominator;
+        }
+
         if(numerator<0 && denominator>0){
             isNegative = true;
             numerator = numerator*(-1);
@@ -57,8 +63,6 @@ Rational::Rational(int numerator, int denominator){
         
         for(int i=1; i<=a && i<=b; i++)
         {
-            // float aa=a%i;
-            // float bb=b%i;
             if(!(a%i) && !(b%i))
             {
                 num = a/i;
@@ -90,16 +94,16 @@ Rational operator - (Rational l, Rational r){
 }
 
 Rational operator * (Rational l, Rational r){
-    return Rational(l.Numerator()*r.Numerator(),l.Denominator()*r.Denominator());
+    return Rational(l.Numerator()*r.Numerator(), l.Denominator()*r.Denominator());
 }
 
 Rational operator / (Rational l, Rational r){
-    Rational res(l.Numerator()*r.Denominator(),l.Denominator()*r.Numerator());
+    Rational res(l.Numerator()*r.Denominator(), l.Denominator()*r.Numerator());
     return res;
 }
 
 int main() {
-    {
+{
         Rational a(2, 3);
         Rational b(4, 3);
         Rational c = a * b;

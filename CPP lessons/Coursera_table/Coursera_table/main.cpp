@@ -18,6 +18,7 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
+#include <fstream>
 
 const char* test1 = "2 3\n"
 "1,2,3\n"
@@ -48,6 +49,29 @@ long nextNumber(std::string& line)
 
 int main(int argc, const char * argv[])
 {
+    std::ifstream input("input.txt");
+    int value;
+    if (input) {
+        int N,M;
+        input>>N;
+        input>>M;
+        for (int i = 0; i<N; ++i) {
+            for (int j = 0; j<M;++j) {
+                input>>value;
+                std::cout<<std::setw(10)<<value;
+                if (j!=(M-1)) {
+                    std::cout<<" ";
+                    input.ignore(1);
+                }
+            }
+            if (i!=(N-1)) {
+                std::cout<<std::endl;
+            }
+        }
+    }
+/*
+    
+    
     //std::stringstream cin(test1);
     int N, M;
     std::cin >> N;
@@ -97,4 +121,5 @@ int main(int argc, const char * argv[])
 //
 //    delete[] A;
         return 0;
+*/
 }

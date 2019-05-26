@@ -16,8 +16,9 @@ using namespace std;
 
 string AskTimeServer() {
     return "03:25:56";
+    // Try one of this exceptions:
    //  throw system_error(error_code());
-  //  throw exception();
+   //  throw exception();
 }
 
 class TimeServer {

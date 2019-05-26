@@ -183,28 +183,10 @@ Rational operator / (Rational l, Rational r){
 }
 
 // Operators < and >:
-//bool operator > (Rational l, Rational r){
-//    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
-//        return false;
-//    }else{
-//        if(l.Denominator() == r.Denominator()){
-//            return l.Numerator() > r.Numerator();
-//        }
-//        return l.Denominator() > r.Denominator();
-//    }
-//}
 
 bool operator < (Rational l, Rational r)
 {
     return ((double)l.Numerator() / (double)l.Denominator()) < ((double)r.Numerator() / (double)r.Denominator());
-//    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
-//        return true;
-//    }else{
-//        if(l.Denominator() == r.Denominator()){
-//            return l.Numerator() < r.Numerator();
-//        }
-//        return l.Denominator() < r.Denominator();
-//    }
 }
 
 // Operator to print :

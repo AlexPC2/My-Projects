@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -90,6 +92,27 @@ Rational operator / (const Rational& l,const Rational& r)
         throw domain_error("Error in /");
     }
 }
+
+Rational operator + (Rational l,Rational r){
+    return Rational(l.Numerator()*r.Denominator()+r.Numerator()*l.Denominator(),l.Denominator()*r.Denominator());
+}
+
+bool operator == (Rational l,Rational r){
+    if(l.Numerator() == r.Numerator() && l.Denominator() == r.Denominator()){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+Rational operator - (Rational l, Rational r){
+    return Rational(l.Numerator()*r.Denominator()-r.Numerator()*l.Denominator(),l.Denominator()*r.Denominator());
+}
+
+Rational operator * (Rational l, Rational r){
+    return Rational(l.Numerator()*r.Numerator(), l.Denominator()*r.Denominator());
+}
+
 
 int main() {
     try {

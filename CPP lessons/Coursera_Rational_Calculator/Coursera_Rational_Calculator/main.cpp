@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -15,6 +17,8 @@ class Rational
 public:
     Rational() {num = 0; denom = 1;};
     Rational(int numerator, int denominator) ;
+    
+    //void Set(int numerator,int denominator);
     
     int Numerator() const;
     int Denominator() const;
@@ -31,6 +35,49 @@ int Rational::Numerator() const{
 int Rational::Denominator()const{
     return denom;
 }
+
+/*
+void Rational::Set(int numerator, int denominator)
+{
+    if(denominator == 0)
+    if(numerator == 0){
+        denom = 1;
+        num = 0;
+    }else{
+        int a, b;
+        float p=0.0, q=0.0;
+        bool isNegative = false;
+        
+        if(numerator<0 && denominator>0){
+            isNegative = true;
+            numerator = numerator*(-1);
+        }
+        
+        if(denominator<0 && numerator >0){
+            isNegative = true;
+            denominator = denominator*(-1);
+        }
+        
+        a = numerator;
+        b = denominator;
+        
+        p=a; q=b;
+        
+        for(int i=1; i<=a && i<=b; i++)
+        {
+            if(!(a%i) && !(b%i))
+            {
+                num = a/i;
+                denom = b/i;
+                
+                if(isNegative == true){
+                    num = num*(-1);
+                }
+            }
+        }
+    }
+}
+*/
 
 Rational::Rational(int numerator, int denominator)
 {
@@ -118,10 +165,11 @@ bool operator < (Rational l, Rational r)
 }
 
 // Operator to print :
-ostream& operator << (ostream& stream,Rational& r){
-    stream << setfill('0');
-    stream << setw(2) << r.Numerator()<< '/' <<
-    setw(2) << r.Denominator();
+ostream& operator << (ostream& stream,Rational& r)
+{
+    //stream << setfill('0');
+    stream << setw(1) << r.Numerator()<< '/' <<
+    setw(1) << r.Denominator();
     return stream;
 }
 
@@ -139,7 +187,7 @@ istream& operator >> (istream& stream, Rational& r){
         stream >> n;
         stream.ignore(1);
         stream >> d;
-        r.Set(n, d);
+        r = Rational(n, d);
     }
     return stream;
 }
@@ -147,10 +195,59 @@ istream& operator >> (istream& stream, Rational& r){
 int main(){
     
     Rational r1,r2;
+    try{
     char opertr;
-    cin >> r1;
-    cin >> ignore(1) >> opertr;
-    cin >> r2;
+    cin >> r1;          // Reading first rational number
+    cin.ignore(1);
+    cin >> opertr;      // Reading operator
+    cin.ignore(1);
+    cin >> r2;          // Reading second rational number
+    
+    switch (opertr) {
+        case '+':
+        {
+            Rational res = r1 + r2;
+            cout << res << endl;
+            break;
+        }
+            
+        case '-':
+        {
+            Rational res = r1 - r2;
+            cout << res << endl;
+            break;
+        }
+            
+        case '*':
+        {
+            Rational res = r1 * r2;
+            cout << res << endl;
+            break;
+        }
+            
+        case '/':
+        {
+            Rational res = r1 / r2;
+            cout << res << endl;
+            break;
+        }
+            
+        default:
+            cout << "Wrong operator!" << endl;
+            break;
+        }
+    }
+    
+    catch (const invalid_argument& e){
+        cout << "Invalid argument" << endl;
+    }
+    catch (domain_error& e) {
+        cout << "Division by zero" << endl;
+        
+    }
+    
+    // Output test;
+    //cout << r1 << " " << opertr << " " << r2 << endl;
     
     return 0;
 }

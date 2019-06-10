@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		D968FEEF22967F5000DB274C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D968FEEE22967F5000DB274C /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D968FEE922967F5000DB274C /* CopyFiles */ = {
+=======
 		A48E456F22945D5600CAE1DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48E456E22945D5600CAE1DC /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A48E456922945D5600CAE1DC /* CopyFiles */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +31,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		D968FEEB22967F5000DB274C /* Coursera_Function_class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursera_Function_class; sourceTree = BUILT_PRODUCTS_DIR; };
+		D968FEEE22967F5000DB274C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D968FEE822967F5000DB274C /* Frameworks */ = {
+=======
 		A48E456B22945D5600CAE1DC /* Coursera_Function_class */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursera_Function_class; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48E456E22945D5600CAE1DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A48E456822945D5600CAE1DC /* Frameworks */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
+		D968FEE222967F5000DB274C = {
+			isa = PBXGroup;
+			children = (
+				D968FEED22967F5000DB274C /* Coursera_Function_class */,
+				D968FEEC22967F5000DB274C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D968FEEC22967F5000DB274C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D968FEEB22967F5000DB274C /* Coursera_Function_class */,
+=======
 		A48E456222945D5600CAE1DC = {
 			isa = PBXGroup;
 			children = (
@@ -50,14 +81,22 @@
 			isa = PBXGroup;
 			children = (
 				A48E456B22945D5600CAE1DC /* Coursera_Function_class */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		D968FEED22967F5000DB274C /* Coursera_Function_class */ = {
+			isa = PBXGroup;
+			children = (
+				D968FEEE22967F5000DB274C /* main.cpp */,
+=======
 		A48E456D22945D5600CAE1DC /* Coursera_Function_class */ = {
 			isa = PBXGroup;
 			children = (
 				A48E456E22945D5600CAE1DC /* main.cpp */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			path = Coursera_Function_class;
 			sourceTree = "<group>";
@@ -65,6 +104,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+<<<<<<< HEAD
+		D968FEEA22967F5000DB274C /* Coursera_Function_class */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D968FEF222967F5000DB274C /* Build configuration list for PBXNativeTarget "Coursera_Function_class" */;
+			buildPhases = (
+				D968FEE722967F5000DB274C /* Sources */,
+				D968FEE822967F5000DB274C /* Frameworks */,
+				D968FEE922967F5000DB274C /* CopyFiles */,
+=======
 		A48E456A22945D5600CAE1DC /* Coursera_Function_class */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A48E457222945D5600CAE1DC /* Build configuration list for PBXNativeTarget "Coursera_Function_class" */;
@@ -72,6 +120,7 @@
 				A48E456722945D5600CAE1DC /* Sources */,
 				A48E456822945D5600CAE1DC /* Frameworks */,
 				A48E456922945D5600CAE1DC /* CopyFiles */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			buildRules = (
 			);
@@ -79,12 +128,25 @@
 			);
 			name = Coursera_Function_class;
 			productName = Coursera_Function_class;
+<<<<<<< HEAD
+			productReference = D968FEEB22967F5000DB274C /* Coursera_Function_class */;
+=======
 			productReference = A48E456B22945D5600CAE1DC /* Coursera_Function_class */;
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
+<<<<<<< HEAD
+		D968FEE322967F5000DB274C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Popoff Developer Studio";
+				TargetAttributes = {
+					D968FEEA22967F5000DB274C = {
+=======
 		A48E456322945D5600CAE1DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
@@ -92,41 +154,67 @@
 				ORGANIZATIONNAME = MPEI;
 				TargetAttributes = {
 					A48E456A22945D5600CAE1DC = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
+<<<<<<< HEAD
+			buildConfigurationList = D968FEE622967F5000DB274C /* Build configuration list for PBXProject "Coursera_Function_class" */;
+=======
 			buildConfigurationList = A48E456622945D5600CAE1DC /* Build configuration list for PBXProject "Coursera_Function_class" */;
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
+<<<<<<< HEAD
+			mainGroup = D968FEE222967F5000DB274C;
+			productRefGroup = D968FEEC22967F5000DB274C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D968FEEA22967F5000DB274C /* Coursera_Function_class */,
+=======
 			mainGroup = A48E456222945D5600CAE1DC;
 			productRefGroup = A48E456C22945D5600CAE1DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A48E456A22945D5600CAE1DC /* Coursera_Function_class */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+<<<<<<< HEAD
+		D968FEE722967F5000DB274C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D968FEEF22967F5000DB274C /* main.cpp in Sources */,
+=======
 		A48E456722945D5600CAE1DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A48E456F22945D5600CAE1DC /* main.cpp in Sources */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< HEAD
+		D968FEF022967F5000DB274C /* Debug */ = {
+=======
 		A48E457022945D5600CAE1DC /* Debug */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -174,14 +262,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+=======
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
+<<<<<<< HEAD
+		D968FEF122967F5000DB274C /* Release */ = {
+=======
 		A48E457122945D5600CAE1DC /* Release */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,13 +319,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+=======
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
+<<<<<<< HEAD
+		D968FEF322967F5000DB274C /* Debug */ = {
+=======
 		A48E457322945D5600CAE1DC /* Debug */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -237,7 +341,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< HEAD
+		D968FEF422967F5000DB274C /* Release */ = {
+=======
 		A48E457422945D5600CAE1DC /* Release */ = {
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -248,25 +356,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<< HEAD
+		D968FEE622967F5000DB274C /* Build configuration list for PBXProject "Coursera_Function_class" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D968FEF022967F5000DB274C /* Debug */,
+				D968FEF122967F5000DB274C /* Release */,
+=======
 		A48E456622945D5600CAE1DC /* Build configuration list for PBXProject "Coursera_Function_class" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A48E457022945D5600CAE1DC /* Debug */,
 				A48E457122945D5600CAE1DC /* Release */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<< HEAD
+		D968FEF222967F5000DB274C /* Build configuration list for PBXNativeTarget "Coursera_Function_class" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D968FEF322967F5000DB274C /* Debug */,
+				D968FEF422967F5000DB274C /* Release */,
+=======
 		A48E457222945D5600CAE1DC /* Build configuration list for PBXNativeTarget "Coursera_Function_class" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A48E457322945D5600CAE1DC /* Debug */,
 				A48E457422945D5600CAE1DC /* Release */,
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
+<<<<<<< HEAD
+	rootObject = D968FEE322967F5000DB274C /* Project object */;
+=======
 	rootObject = A48E456322945D5600CAE1DC /* Project object */;
+>>>>>>> 0e8abc577d29c42a8efbdb5ecc984e821db9a408
 }

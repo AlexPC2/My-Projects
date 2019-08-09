@@ -6,7 +6,7 @@
 //  Copyright © 2018 MPEI. All rights reserved.
 //
 
-// The 23th of July
+// The 23th of July 2018
 
 // In this lesson I will learn about maps in cpp language
 

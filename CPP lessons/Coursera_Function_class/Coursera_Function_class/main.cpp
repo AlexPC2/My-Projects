@@ -2,27 +2,12 @@
 //  main.cpp
 //  Coursera_Function_class
 //
-//  Created by Александр Ноянов on 21/05/2019.
-//  Copyright © 2019 MPEI. All rights reserved.
+//  Created by Alex Noyanov on 23.05.19.
 //
-
 #include <iostream>
+#include <algorithm>
 #include <vector>
-#include <string>
-
 using namespace std;
-
-//struct Image {
-//    double quality;
-//    double freshness;
-//    double rating;
-//};
-//
-//struct Params {
-//    double a;
-//    double b;
-//    double c;
-//};
 
 class FunctionPart {
 public:
@@ -31,22 +16,53 @@ public:
         value = new_value;
     }
     double Apply(double source_value) const {
-        if (operation == '+') {
-            return source_value + value;
-        } else {                        // operation == '-'
-            
-            if(operation == '*')
-            {
-                return source_value;
-            }
-            return source_value - value;
+//        if (operation == '+') {
+//            return source_value + value;
+//        } else {  // operation == '-'
+//            return source_value - value;
+//        }
+        
+        switch (operation) {
+            case '+':
+                return source_value+value;
+                break;
+            case '-':
+                return source_value - value;
+                break;
+            case '*':
+                return source_value * value;
+                break;
+            case '/':
+                return source_value / value;
+                break;
+                
+                
+            default:
+                break;
         }
+        return 0;
     }
     void Invert() {
-        if (operation == '+') {
-            operation = '-';
-        } else {                        // operation == '-'
-            operation = '+';
+//        if (operation == '+') {
+//            operation = '-';
+//        } else {  // operation == '-'
+//            operation = '+';
+//        }
+        switch (operation) {
+            case '+':
+                operation = '-';
+                break;
+            case '-':
+                operation = '+';
+                break;
+            case '*':
+                operation = '/';
+                break;
+            case '/':
+                operation = '*';
+                
+            default:
+                break;
         }
     }
 private:
@@ -59,7 +75,6 @@ public:
     void AddPart(char operation, double value) {
         parts.push_back({operation, value});
     }
-    
     double Apply(double value) const {
         for (const FunctionPart& part : parts) {
             value = part.Apply(value);
@@ -75,27 +90,4 @@ public:
 private:
     vector<FunctionPart> parts;
 };
-
-Function MakeWeightFunction(const Params& params,
-                            const Image& image) {
-    Function function;
-    function.AddPart('-', image.freshness * params.a + params.b);
-    function.AddPart('+', image.rating * params.c);
-    return function;
-}
-
-double ComputeImageWeight(const Params& params, const Image& image) {
-    Function function = MakeWeightFunction(params, image);
-    return function.Apply(image.quality);
-}
-
-double ComputeQualityByWeight(const Params& params,
-                              const Image& image,
-                              double weight) {
-    Function function = MakeWeightFunction(params, image);
-    function.Invert();
-    return function.Apply(weight);
-    
-}
-
 

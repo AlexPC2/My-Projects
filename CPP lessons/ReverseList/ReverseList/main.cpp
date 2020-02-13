@@ -15,7 +15,7 @@ struct List{
     void addElement(int x){
         List newElem;
         newElem.value = x;
-        next = &newElem;
+        //next->newElem;
         newElem.next = NULL;
     }
 };
@@ -33,7 +33,13 @@ int main(int argc, const char * argv[]) {
         myListRoot.addElement(v);
     }
     
-    // Printing from the 
+    // Printing elements from the list:
+     cout << "   ==== List values ====\n";
+    while(myListRoot.next != NULL){
+        cout << myListRoot.value << "\n";
+        if(myListRoot.next != NULL)
+            myListRoot = *myListRoot.next;
+    }
     
     
     return 0;

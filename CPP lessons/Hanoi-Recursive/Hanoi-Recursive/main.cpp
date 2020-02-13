@@ -29,9 +29,7 @@ void hanoi(int n, int from, int to, int through) {
        
         cout << n << " "<< from << " " << to  << " \n";
         hanoi(n-1, through, to, from);
-        
     }
-    
 }
 
 int main(int argc, const char * argv[]) {

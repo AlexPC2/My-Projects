@@ -11,12 +11,28 @@ using namespace std;
 
 struct List{
     int value;
-    List* next = NULL;
+    List* next;
     void addElement(int x){
         List newElem;
         newElem.value = x;
         //next->newElem;
         newElem.next = NULL;
+    }
+};
+
+// List node with data:
+struct node{
+    int value;
+};
+
+// List with classes:
+class oneLinkedList{
+    private:
+    node* head;
+    
+    public:
+    oneLinkedList(){
+        head = NULL;
     }
 };
 
@@ -37,7 +53,7 @@ int main(int argc, const char * argv[]) {
      cout << "   ==== List values ====\n";
     while(myListRoot.next != NULL){
         cout << myListRoot.value << "\n";
-        if(myListRoot.next != NULL)
+      
             myListRoot = *myListRoot.next;
     }
     
